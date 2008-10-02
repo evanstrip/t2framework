@@ -1,0 +1,10 @@
+#labels Featured
+#Change Log
+
+= Version 2.1.2 =
+
+Small fixes. Turning off MerseneTwister random generator untill I figured out why it doesn't work on linux.
+
+= Version 2.1.1 =
+
+Adding some small fixes to 2.1.
