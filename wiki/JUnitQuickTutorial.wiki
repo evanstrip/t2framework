@@ -1,4 +1,3 @@
-#JUnit 4.x Quick Tutorial.
 
 = JUnit 4.x Quick Tutorial =
 
