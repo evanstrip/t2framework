@@ -77,7 +77,7 @@ Let us write two simple tests to check if pricePerMonth correctly calculates the
 
 Of course we can write tests without JUnit; but this tutorial is about JUnit. So here is how we write them in JUnit.
 
-Each of the test above will be implemented as a test method; you then group your test methods in a test class. Usually you would group all the test methods that test a certain target class _C_ is a test class called _CTest_, but you can also have multiple test classes if you want, and call them whatever you want.
+Each of the tests above will be implemented as a test method; you then group your test methods in a test class. Usually you would group all the test methods that test a certain target class _C_ is a test class called _CTest_, but you can also have multiple test classes if you want, and call them whatever you want.
 
 Here is my test class implementing the above two tests:
 
@@ -101,19 +101,19 @@ public class SubscriptionTest {
 }
 }}}
 
-The marker {{{@Test}}} called an annotation in Java. When we later execute JUnit’s test runner it needs to know which methods in your test class are test methods (e.g. you may have several helper methods in your test class). The {{{@Test}}} is used to mark that a method is a test method.
+The marker {{{@Test}}} is called an annotation in Java. When we later execute JUnit’s test runner it needs to know which methods in your test class are test methods (e.g. you may have several helper methods in your test class). The {{{@Test}}} is used to mark that a method is a test method.
 
-In the first test ({{{test_returnEuro}}}) we first create a {{{Subscription}}}; we call it {{{S}}}. Then we want to check that {{{S.pricePerMonth()}}} will return the expected value of 2:0. The checking is done by the code:
+In the first test ({{{test_returnEuro}}}) we first create a {{{Subscription}}}; we call it {{{S}}}. Then we want to check that {{{S.pricePerMonth()}}} will return the expected value of 2.0. The checking is done by the code:
 
 {{{
-assertTrue(S:pricePerMonth() == 2:0)
+assertTrue(S:pricePerMonth() == 2.0)
 }}}
 
 By the way, the annotation {{{@Test}}} and the method {{{assertTrue}}} are things exported by the JUnit library; so you need the imports as in the above code to use them.
 
 ===Compiling and executing your test===
 
-Next we want to execute the above test class ({{{SubscriptionTest}}}). I’ll show how to do this from a _console_. If you use IDE the steps are a bit different.
+Next we want to execute the above test class ({{{SubscriptionTest}}}). I’ll show how to do this from a _console_. If you use an IDE the steps are a bit different.
 
 Open a console. You first need to compile the test class, and then you can execute it. The
 commands are:
@@ -146,6 +146,8 @@ There were 2 failures:
 
 Tests run: 2, Failures: 2
 }}}
+
+The next thing you want to do is to fix your {{{Subscription}}} class and then test it again. We keep fixing it until we get no more failures. You may in the mean time also want to add more tests to your test class.
 
 
 ===What now!?===
