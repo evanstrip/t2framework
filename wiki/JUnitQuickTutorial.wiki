@@ -1,7 +1,9 @@
-
 = JUnit 4.x Quick Tutorial =
 
 by Wishnu Prasetya
+
+This tutorial is for novice Java programmers who try to learn JUnit.
+
 
 ===How does JUnit work?===
 
