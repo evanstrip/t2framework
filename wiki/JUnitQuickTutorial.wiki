@@ -73,8 +73,7 @@ By the way, the class has a number of bugs; e.g. {{{pricePerMonth}}} is supposed
 Let us write two simple tests to check if pricePerMonth correctly calculates the price per month:
 
    # If we have a subscription of 200 cent for a period of 2 month, its monthly price should be 1 euro, right?
-   # The monthly price is supposed to be rounded up to the nearest cent. So, if we have a
-subscription of 200 cent for a period of 3 month, its monthly price should be 0:67 euro.
+   # The monthly price is supposed to be rounded up to the nearest cent. So, if we have a subscription of 200 cent for a period of 3 month, its monthly price should be 0:67 euro.
 
 Of course we can write tests without JUnit; but this tutorial is about JUnit. So here is how we write them in JUnit.
 
