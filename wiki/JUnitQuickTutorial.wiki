@@ -154,4 +154,4 @@ The next thing you want to do is to fix your {{{Subscription}}} class and then t
 
 That’s it! Now go and write your own tests.
 
-You may also want to read my JUnit in Eclipse Quick Tutorial.
+You may also want to read my [http://www.cs.uu.nl/wiki/pub/WP/TrainingInSoftwareTesting/JUnit_with_Eclipse.pdf JUnit in Eclipse Quick Tutorial].
