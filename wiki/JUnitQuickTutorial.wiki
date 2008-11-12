@@ -64,7 +64,7 @@ public class Subscription {
 }
 }}}
 
-For example, {{{new Subscription(1000; 2)}}} will create a new subscription of 1000 Euro-cent for the total period of 2 months.
+For example, {{{new Subscription(1000,2)}}} will create a new subscription of 1000 Euro-cent for the total period of 2 months.
 
 By the way, the class has a number of bugs; e.g. {{{pricePerMonth}}} is supposed to return the price per month in euro. However it calculates the price in cent.
 
