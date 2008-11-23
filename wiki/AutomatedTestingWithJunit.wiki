@@ -102,4 +102,37 @@ public class SortedList {
 }
 }}}
 
+Now let's test the above class. We'll just have to write our usual Junit test; however inside the test we will call T2 to generate the test cases for us. Here is my test:
+
+{{{
+import org.junit.Test;
+
+public class MyTest {
+
+    @Test
+    public void test1() {
+        Sequenic.T2.Main.Junit(SortedList.class.getName()) ;
+    }
+}
+}}}
+
+Just run this test as usual with Junit; but you do have to turn on the {{{-ea}}} option (to enable Java assertions). See it yourself if T2 can find some errors in the above class.
+
+That's it!!
+
+===How does T2 works?===
+
+T2 does not test the methods of a target class individually. Instead, it test the entire class. It randomly generates sequences of method calls and field updates to the target class; along with the parameters they need. As it goes, it checks the specifications in the target class. 
+
+T2 itself has LOT's of options, e.g. options to do regression (replaying saved tests), generating test sequences in search-mode, etc. You'll have to check the manual.
+
+===Using T2 in IDE===
+
+Well, you don't need any special support. As explained above, you can use T2 as a library, and call it from inside your Junit tests. So you can just use T2 in any IDE that supports Junit integration. If your IDE has a plugin that can measures code coverage of your Junit tests, then you do the same with your T2 tests.
+
+===Combining automated and manual tests===
+
+Yes, of course you can. In the above test example, you can add more test methods; some may be the traditional hand crafted tests.
+
+
  
