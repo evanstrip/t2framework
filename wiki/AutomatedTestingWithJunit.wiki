@@ -36,7 +36,7 @@ public class SortedList {
 
 We'll fill in the code later.
 
-When testing with T2 you don't write your test cases; T2 will generate them for you. You don't write oracles either. Instead, you write specifications. Specifications are more powerful and robust than oracles. And don't worry; we'll write our specifications in Java :)
+When testing with T2 you don't write your test cases; T2 will internally generate them for you. You don't write oracles either. Instead, you write specifications. Specifications are more powerful and robust than oracles. And don't worry; we'll write our specifications in Java :)
 
 The first specification we want to write is a class invariant. This is a predicate specifying legal states of the instances of our class. In this case we can expect 
 that the list in the variable {{{s}}} will be sorted. This can be formally expressed in a class invariant. However, if you are a bit lazy you may choose to write a weak specification first, to be refined later when you are a bit further in the coding.
