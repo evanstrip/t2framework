@@ -1,3 +1,5 @@
+#summary A quick JUnit totorial for beginners
+
 = JUnit 4.x Quick Tutorial =
 
 by Wishnu Prasetya
@@ -160,4 +162,6 @@ That’s it! Now go and write your own tests.
 
   * You may also want to read my [http://www.cs.uu.nl/wiki/pub/WP/TrainingInSoftwareTesting/JUnit_with_Eclipse.pdf JUnit in Eclipse Quick Tutorial].
 
+  * Check out my article about [AutomatedTestingWithJunit automated testing with JUnit], or my automated testing too [http://code.google.com/p/t2framework/ T2].
+ 
 ===END.===
