@@ -3,6 +3,10 @@
 
 ===Version 2.1.3===
 
+Search mode is added! 
+
+===Version 2.1.3===
+
 Turning off the printing of static fields when showing an object's state.
 
 ===Version 2.1.2===
