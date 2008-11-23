@@ -4,7 +4,7 @@
 
 by Wishnu Prasetya
 
-Yes, you can do automated testing with JUnit! You need to download my[http://code.google.com/p/t2framework/ T2 utility] first. T2 is a powerful automated testing utility for Java. It is a free sowftware.
+Yes, you can do automated testing with JUnit, but you'll need my[http://code.google.com/p/t2framework/ T2 utility]. T2 is a powerful automated testing utility for Java. It is a free sowftware.
 
 Download T2 jar first, and put it somewhere. We will use it as a normal Java library.
 
