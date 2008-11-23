@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary A short tutorial about automated testing using T2 + JUnit
 
 = Automated Testing with JUnit =
 
