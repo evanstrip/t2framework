@@ -35,3 +35,39 @@ public class SortedList {
     public Comparable get() { ... }
 }
 }}}
+
+We'll fill in the code later.
+
+When testing with T2 you don't write your test cases; T2 will generate them for you. You don't write oracles either. Instead, you write specifications. Specifications are more powerful and robust than oracles. And don't worry; we'll write our specifications in Java :)
+
+The first specification we want to write is a class invariant. This is a predicate specifying legal states of the instances of our class. In this case we can expect 
+that the list in the variable {{{s}}} will be sorted. This can be formally expressed in a class invariant. However, if you are a bit lazy you may choose to write a weak specification first, to be refined later when you are a bit further in the coding.
+
+Ok, so let's write a class invariant. You write it simple as a method called classinv; it takes no argument and returns a boolean. I'll write a weak one:
+
+{{{
+private boolean classinv() {  return s.isEmpty() || s.contains(max) ; }
+}}}
+
+This method does not have any functionality. It just express a specification, and will be internally checked by T2 as it later checks your SortedList class.
+
+I'm a bit lazy, so I'll write no specification for {{{insert}}}. Well ... maybe later. But not now. However, I'll add some specification to {{{get}}}.
+
+The code for {{{get}}} is shown below, along with its specifications. A method can be specified by writing assertions. Note Java assertion is very powerful! You can express complicated things with it. IMPORTANT: assertions that specify pre-conditions of a method should be marked with {{{:"PRE"}}} marker; see below.
+
+{{{
+public Comparable get() {
+
+   assert !s.isEmpty() : "PRE" ;  // Specifying pre-condition
+
+   Comparable x = max ;
+   s.remove(max) ;
+   max = s.getLast() ;
+
+   assert s.isEmpty() || x.compareTo(s.getLast()) >= 0 ; // Specifying post-condition
+
+   return x ;
+}
+}}}
+
+ 
