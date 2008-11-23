@@ -51,9 +51,9 @@ private boolean classinv() {  return s.isEmpty() || s.contains(max) ; }
 
 This method does not have any functionality. It just express a specification, and will be internally checked by T2 as it later checks your SortedList class.
 
-I'm a bit lazy, so I'll write no specification for {{{insert}}}. Well ... maybe later. But not now. However, I'll add some specification to {{{get}}}.
+I'm a bit lazy, so I'll write no specification for "{{{insert}}}". Well ... maybe later. But not now. However, I'll add some specification to "{{{get}}}".
 
-The code for {{{get}}} is shown below, along with its specifications. A method can be specified by writing assertions. Note Java assertion is very powerful! You can express complicated things with it. IMPORTANT: assertions that specify pre-conditions of a method should be marked with {{{:"PRE"}}} marker; see below.
+The code for "{{{get}}}" is shown below, along with its specifications. A method can be specified by writing assertions. Note Java assertion is very powerful! You can express complicated things with it. IMPORTANT: assertions that specify pre-conditions of a method should be marked with {{{:"PRE"}}} marker; see below.
 
 {{{
 public Comparable get() {
@@ -67,6 +67,38 @@ public Comparable get() {
    assert s.isEmpty() || x.compareTo(s.getLast()) >= 0 ; // Specifying post-condition
 
    return x ;
+}
+}}}
+
+Here is the full code of {{{SortedList}}}:
+
+{{{
+public class SortedList {
+
+    private LinkedList<Comparable> s ;   
+    private Comparable max ;             
+
+    public SortedList() { s = new LinkedList<Comparable>() ; }
+
+    private boolean classinv() {  return s.isEmpty() || s.contains(max) ; }
+
+    public void insert(Comparable x) { 
+       int i = 0 ;
+       for (Comparable y : s) {
+          if (y.compareTo(x) > 0) break ;
+          i++ ; }
+      s.add(i,x) ;
+      if (max==null || x.compareTo(max) < 0) max = x ;
+   }
+
+   public Comparable get() { 
+      assert !s.isEmpty() : "PRE" ;  // Specifying pre-condition
+      Comparable x = max ;
+      s.remove(max) ;
+      max = s.getLast() ;
+      assert s.isEmpty() || x.compareTo(s.getLast()) >= 0 ; // Specifying post-condition
+      return x ;
+   }
 }
 }}}
 
