@@ -1,0 +1,37 @@
+#summary One-sentence summary of this page.
+
+UNDER CONSTRUCTION!
+
+= Automated Testing with JUnit =
+
+by Wishnu Prasetya
+
+Yes, you can do automated testing with JUnit! You need to download my[http://code.google.com/p/t2framework/ T2 utility] first. T2 is a powerful automated testing utility for Java. It is a free sowftware.
+
+Download T2 jar first, and put it somewhere. We will use it as a normal Java library.
+
+Let's consider the example below. It's a simple class that provides sorted lists.
+
+{{{
+public class SortedList {
+
+    private LinkedList<Comparable> s ;   // this will hold the list
+    private Comparable max ;             // direct pointer to the largest element
+
+    /**
+     * A constructor to make an empty list.
+     */
+    public SortedList() { s = new LinkedList<Comparable>() ; }
+
+    /**
+     * Insert x into the list; maintain the list sorted, and relink max
+     * accordingly.
+     */
+    public void insert(Comparable x) { ... }
+
+    /**
+     * Retrieve the max-element from the list. 
+     */
+    public Comparable get() { ... }
+}
+}}}
