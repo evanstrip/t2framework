@@ -1,7 +1,5 @@
 #summary One-sentence summary of this page.
 
-UNDER CONSTRUCTION!
-
 = Automated Testing with JUnit =
 
 by Wishnu Prasetya
@@ -134,5 +132,4 @@ Well, you don't need any special support. As explained above, you can use T2 as 
 
 Yes, of course you can. In the above test example, you can add more test methods; some may be the traditional hand crafted tests.
 
-
- 
+===End=== 
