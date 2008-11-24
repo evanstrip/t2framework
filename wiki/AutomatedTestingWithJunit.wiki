@@ -1,4 +1,5 @@
 #summary A short tutorial about automated testing using T2 + JUnit
+#labels Featured
 
 = Automated Testing with JUnit =
 
