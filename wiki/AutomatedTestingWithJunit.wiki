@@ -114,7 +114,12 @@ public class MyTest {
 }
 }}}
 
-Just run this test as usual with Junit; but you do have to turn on the {{{-ea}}} option (to enable Java assertions). See it yourself if T2 can find some errors in the above class.
+Furthermore you need to:
+
+  * Include T2 jar in your class path
+  * To turn on the {{{-ea}}} option of JVM (to enable Java assertions checking).
+
+Then just run the above test as usual with Junit. See it yourself if T2 can find some errors in the above class.
 
 That's it!!
 
