@@ -110,6 +110,9 @@ public class MyTest {
 
     @Test
     public void test1() {
+
+        // Call T2, pass the full name of the target class to it:
+
         Sequenic.T2.Main.Junit(SortedList.class.getName()) ;
     }
 }
@@ -126,9 +129,23 @@ That's it!!
 
 ===How does T2 works?===
 
-T2 does not test the methods of a target class individually. Instead, it test the entire class. It randomly generates sequences of method calls and field updates to the target class; along with the parameters they need. As it goes, it checks the specifications in the target class. 
+T2 does not test the methods of a target class individually. Instead, it test the entire class. It randomly generates (lots of!) sequences of method calls and field updates to the target class; along with the parameters they need. As it goes, it checks the specifications in the target class. 
 
-T2 itself has LOT's of options, e.g. options to do regression (replaying saved tests), generating test sequences in search-mode, etc. You'll have to check the manual.
+T2 itself has LOT's of options, e.g. to make it generate 20.000 test steps divided into sequences of length 10, and to report the first 8 violations (rather that the default 1), we change the above test method to:
+
+{{{
+@Test
+public void test1() {
+   Sequenic.T2.Main.Junit(
+        SortedList.class.getName() 
+        + " " 
+        + "--nmax=20000 --lenexec=10 --violmax=8"  // pass T2 options here
+   ) ;
+}
+}}}
+
+There are options to do regression (replaying saved tests), generating test sequences in search-mode, etc etc. You'll have to check the manual.
+
 
 ===Using T2 in IDE===
 
