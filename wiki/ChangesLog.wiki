@@ -1,6 +1,10 @@
 #labels Featured
 =Change Log=
 
+===Version 2.1.4.1===
+
+Minor bug fix.
+
 ===Version 2.1.4===
 
 Search mode is added! 
