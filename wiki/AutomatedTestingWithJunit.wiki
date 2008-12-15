@@ -149,7 +149,7 @@ There are options to do regression (replaying saved tests), generating test sequ
 
 ===Using T2 in IDE===
 
-Well, you don't need any special support. As explained above, you can use T2 as a library, and call it from inside your Junit tests. So you can just use T2 in any IDE that supports Junit integration. If your IDE has a plugin that can measures code coverage of your Junit tests, then you do the same with your T2 tests.
+Well, you don't need any special support. As explained above, you can use T2 as a library, and call it from inside your Junit tests. So you can just use T2 in any IDE that supports Junit integration like Eclipse or Netbeans. It is not necessary but highly recommended that you also instell a plugin for your IDE that can measures the code coverage of your Junit tests; then you do the same with your T2 tests. E.g. for Eclipse you have the EclEmma plugin that can do this. 
 
 ===Combining automated and manual tests===
 
