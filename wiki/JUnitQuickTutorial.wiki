@@ -110,7 +110,7 @@ The marker {{{@Test}}} is called an annotation in Java. When we later execute JU
 In the first test ({{{test_returnEuro}}}) we first create a {{{Subscription}}}; we call it {{{S}}}. Then we want to check that {{{S.pricePerMonth()}}} will return the expected value of 1.0. The checking is done by the code:
 
 {{{
-assertTrue(S:pricePerMonth() == 1.0)
+assertTrue(S.pricePerMonth() == 1.0)
 }}}
 
 By the way, the annotation {{{@Test}}} and the method {{{assertTrue}}} are things exported by the JUnit library; so you need the imports as in the above code to use them.
