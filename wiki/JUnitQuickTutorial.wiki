@@ -120,13 +120,16 @@ By the way, the annotation {{{@Test}}} and the method {{{assertTrue}}} are thing
 Next we want to execute the above test class ({{{SubscriptionTest}}}). I’ll show how to do this from a _console_. If you use an IDE the steps are a bit different.
 
 Open a console. You first need to compile the test class, and then you can execute it. The
-commands are:
+commands are (in Windows):
 
 {{{
 prompt> javac -cp .;<full path to JUnit.jar> SubscriptionTest.java
 
 prompt> java  -cp .;<full path to JUnit.jar> org.junit.runner.JUnitCore SubscriptionTest
 }}}
+
+(In e.g. Mac you probably have to use ':' instead of ';')
+
 
 The first command will compile the test class. The second will execute JUnit’s test runner; we pass to it the name of your test class.
 
