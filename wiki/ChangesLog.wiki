@@ -1,6 +1,12 @@
 #labels Featured
 =Change Log=
 
+===Version 2.1.4.4===
+
+Bug fixes, among other the crash when T2 was asked to generate certain primitive types (forgot to cover them in the basedomain). Thanks to newportmeistes.
+
+The engine is tweaked a bit to allow a custom generator to generate nulls for boxing types (e.g. Integer). Thanks to Christiaan Hees.
+
 ===Version 2.1.4.1===
 
 Minor bug fix.
