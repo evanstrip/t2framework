@@ -1,6 +1,13 @@
 #labels Featured
 =Change Log=
 
+
+===Version 2.1.4.5===
+
+Fixing compatibility problem with Java 1.5 (that was present in some of the previous versions).
+
+Adding explicit serial numbers for the serialization of test-sequences. This may cause this new version to refuse loading saved test-sequences from earlier version; but I don't expect anyone will actually experience this problem.
+
 ===Version 2.1.4.4===
 
 Bug fixes, among other the crash when T2 was asked to generate certain primitive types (forgot to cover them in the basedomain). Thanks to newportmeistes.
