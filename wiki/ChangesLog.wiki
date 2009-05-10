@@ -1,6 +1,17 @@
 #labels Featured
 =Change Log=
 
+===Version 2.2.0 Beta===
+
+Improved combinatoric engine. If a,b,c are in the testing-scope before we can only generate permutations of a,b,c; not we can also generate products over a,b,c. That is, (a,a,c) for example can now be generated.
+
+The manual is improved with examples of custom InterfaceMap and BaseDomain.
+
+Various small fixes.
+
+The 2.2 line is still maintained Beta because we are still working on it. In principle we only work on adding features; but it does make 2.2 at the moment still a bit unstable.
+
+
 
 ===Version 2.1.4.5===
 
