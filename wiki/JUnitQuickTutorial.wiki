@@ -1,4 +1,4 @@
-#summary A quick JUnit totorial for beginners
+#summary A quick JUnit tutorial for beginners
 
 = JUnit 4.x Quick Tutorial =
 
