@@ -69,6 +69,8 @@ javadoc -d mydocs src\*.java
 
 where `mydocs` is the directory where you want to put the generated HTML documentations; `src` is the directory where you put your java files. The above command will generate HTML documentation of all Java files in `src`.
 
+The result is [http://people.cs.uu.nl/wishnu/etc/Person.html something like this.]
+
 However the above command does not generate documentation for the Java classes which are within a package. To generate the documentation of an entire package do something like this:
 
 {{{
