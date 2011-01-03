@@ -41,7 +41,7 @@ public class Person {
     /**
      * This will return true if this person has no friend.
      */
-    boolean isLonely() { return friends.isEmpty() ; }
+    public boolean isLonely() { return friends.isEmpty() ; }
 }
 }}}
 
@@ -56,7 +56,7 @@ an example of how you can to that, and to also describe the return value:
      * @param p The person to be added as a friend.
      * @return  True if p is new a friend; else false.
      */
-    boolean addFriend(Person p) { 
+    public boolean addFriend(Person p) { 
             if (friends.contains(p)) return false ;
             friends.add(p) ; 
             return true ;
