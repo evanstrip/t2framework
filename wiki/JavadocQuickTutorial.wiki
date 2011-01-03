@@ -1,26 +1,28 @@
 = A tutorial for basic use of Javadoc =
 
-Javadoc is a standard tool that allows you to generate HTML documentation of your Java programs. All you need to do is to write your comments in your programs, then you run javadoc to generate your HTML docs. However you must write your documentation in a certain way. Here is an example:
+Javadoc is a standard tool that allows you to generate HTML documentation of your Java programs. All you need to do is to write your comments in your programs, then you run javadoc to generate your HTML docs. However you must write your documentation in a certain way. 
+
+Here how you can add a comment that describes your class. Rather than starting a comment
+with the usual `/*`, you must start with `/**` to make your comment to be understood by javadoc. You can also use HTML in your comment, as shown below.
 
 {{{
-import java.util.*;
-
 /**
- * You can describe your class here, by adding this kind of comment right
- * above your class declaration. You can also use HTML tags in your 
- * documentation, as shown below.
- *
- * <p>An object of this class represents a person, which may have <i>friends</i>.
- * </p>
- * 
+ * An object of this class represents a person, which may have <i>friends</i>.
  */
+public class Person {
+    public String name ;
+    public Set<Person> friends ;
+    ...
+}
+}}}
+
+You can add pieces of documentation to your public attributes, constructors, and methods, like this:
+
+{{{
 public class Person {
 
     /**
-     * You can add a description of a public attribute, by documenting it above the
-     * attribute, as we did now.
-     * 
-     * <p>This is the name of this person</p>.
+     * This is the name of this person.
      */
     public String name ;
     
@@ -30,9 +32,7 @@ public class Person {
     public Set<Person> friends ;
     
     /**
-     * In the same way, you can add a description of a public method or constructor.
-     * 
-     * <p>This will create a person with the given name, and an empty set of friends.</p>
+     * This will create a person with the given name, and an empty set of friends.</p>
      */
     public Person(String n) {
             name = n ; friends = new HashSet<Person>() ;
@@ -42,13 +42,16 @@ public class Person {
      * This will return true if this person has no friend.
      */
     boolean isLonely() { return friends.isEmpty() ; }
-    
+}
+}}}
+
+If a method has complex parameters, you may want to describe them separately. This is 
+an example of how you can to that, and to also describe the return value:
+
+{{{    
     /**
-     * You can also describe what each parameter is, as below. You can also describe
-     * the return value.
-     * 
-     * <p>This method is used to add a friend to this person, if the person is not a
-     * friend already.</p>
+     * This method is used to add a friend to this person, if the person is not a
+     * friend already.
      * 
      * @param p The person to be added as a friend.
      * @return  True if p is new a friend; else false.
@@ -58,8 +61,9 @@ public class Person {
             friends.add(p) ; 
             return true ;
     }
-}
 }}}
+
+=== Running javadoc ===
 
 To run javadoc you will need to have it. It should already be included in your Java, and the path to it should already be included in your system. So, to run it you need to do something like this from your *console*:
 
