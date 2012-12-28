@@ -3,6 +3,8 @@
 
 ===Version 2.2.0 Beta===
 
+Directly thrown IllegalArgumentException now counts as an assumption violation. If it is thrown indirectly, it then counts as requirement violation.
+
 Improved combinatoric engine. If a,b,c are in the testing-scope before we can only generate permutations of a,b,c; not we can also generate products over a,b,c. That is, (a,a,c) for example can now be generated.
 
 The manual is improved with examples of custom InterfaceMap and BaseDomain.
