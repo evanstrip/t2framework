@@ -115,7 +115,7 @@ Now let's test the above class using T2. Let's first do this directly from the c
 > java -ea -cp MyT2DIR/bin/TTversion.jar;MyT2DIR/bin/* Sequenic.T2.Main Examples.SimpleSortedList
 }}}
 
-where MyT2DIR is the assumed directory where you have installed/unzipped T2. That's it!
+where MyT2DIR is the assumed directory where you have installed/unzipped T2. That's it! See it yourself if T2 can find some errors in the above class.
 
 ===T2 Report===
 
@@ -164,7 +164,7 @@ And it reports to you a summary of how many test-sequences it produces, and how 
 ** Saving 1 traces...
 }}}
 
-And when violations are found, for each violation, the step were the violation is observed will be printed (and perhaps even some k-steps before it, depending on your setting):
+And when violations are found, for each violation, the step were the violation is observed will be printed (and perhaps even some k-steps before it, depending on your setting), for example:
 
 {{{
 ** Begin test sequence.
@@ -210,9 +210,9 @@ xx Assertion VIOLATED!
 }}}
 
 
-===Using T2 from JUnit===
+===We can also write JUnit tests with T2===
 
-We'll just have to write our usual Junit test; however inside the test we will call T2 to generate the test cases for us. Here is my test:
+We can write Junit test methods as usual, however from inside those methods we call T2 to generate the the test sequences automatically for us. For example:
 
 {{{
 import org.junit.Test;
@@ -229,16 +229,16 @@ public class MyTest {
 }
 }}}
 
-Furthermore you need to:
+Then just run the above test as usual with Junit; but additionally you need to:
 
-  * Include T2 jar in your class path
+  * Include {{{MyT2DIR/bin/T2version.jar}}} and {{{MyT2DIR/bin/*}}} in your class path
   * To turn on the {{{-ea}}} option of JVM (to enable Java assertions checking).
 
-Then just run the above test as usual with Junit. See it yourself if T2 can find some errors in the above class.
+
 
 That's it!!
 
-===How does T2 works?===
+==How does T2 works?==
 
 T2 does not test the methods of a target class individually. Instead, it test the entire class. It randomly generates (lots of!) sequences of method calls and field updates to the target class; along with the parameters they need. As it goes, it checks the specifications in the target class. 
 
