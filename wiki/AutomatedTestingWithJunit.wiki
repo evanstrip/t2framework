@@ -156,6 +156,51 @@ And it reports to you a summary of how many test-sequences it produces, and how 
 ** Saving 1 traces...
 }}}
 
+And when violations are found, for each violation, the step were the violation is observed will be printed (and perhaps even some k-steps before it, depending on your setting):
+
+{{{
+** Begin test sequence.
+** STEP 0: creating target object.
+** Calling constructor Examples.SimpleSortedList
+** Resulting target object:
+   (Examples.SimpleSortedList) @ 0
+   s (LinkedList) @ 1
+   max NULL
+** STEP 1.
+** Calling method insert with:
+** Receiver: target-obj
+** Arg [0:]
+   (Integer) : 2
+** State of target object now:
+   (Examples.SimpleSortedList) @ 0
+   s (LinkedList) @ 1
+      [0] (Integer) : 2
+   max (Integer) : 2
+** STEP 2.
+** Calling method insert with:
+** Receiver: target-obj
+** Arg [0:]
+   (Integer) : -3
+** State of target object now:
+   (Examples.SimpleSortedList) @ 0
+   s (LinkedList) @ 1
+      [0] (Integer) : -3
+      [1] (Integer) : 2
+   max (Integer) : -3
+** STEP 3.
+** Calling method get_spec with:
+** Receiver: target-obj
+** State of target object now:
+   (Examples.SimpleSortedList) @ 0
+   s (LinkedList) @ 1
+      [0] (Integer) : 2
+   max (Integer) : 2
+xx Assertion VIOLATED!
+** Strack trace: java.lang.AssertionError: POST
+...
+** End test sequence
+}}}
+
 
 ===Using T2 from JUnit===
 
