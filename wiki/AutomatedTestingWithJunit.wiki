@@ -1,7 +1,7 @@
-#summary A short tutorial about automated testing using T2 + JUnit
+#summary A short tutorial about automated testing using T2
 #labels Featured
 
-= Automated Testing with T2 + JUnit =
+= Automated Testing with T2 =
 
 by Wishnu Prasetya
 
@@ -10,6 +10,8 @@ Download and install [http://code.google.com/p/t2framework/ T2] first;  it an au
 Let's consider the example below. It's a simple class that provides sorted lists.
 
 {{{
+package Examples ;
+
 public class SortedList {
 
     private LinkedList<Comparable> s ;   // this will hold the list
@@ -70,6 +72,8 @@ public Comparable get() {
 Here is the full code of {{{SortedList}}}:
 
 {{{
+package Examples ;
+
 public class SortedList {
 
     private LinkedList<Comparable> s ;   
@@ -99,7 +103,20 @@ public class SortedList {
 }
 }}}
 
-Now let's test the above class. We'll just have to write our usual Junit test; however inside the test we will call T2 to generate the test cases for us. Here is my test:
+===Now, let's test!===
+
+Now let's test the above class using T2. Let's first do this directly from the console:
+
+{{{
+> java -ea -cp MyT2DIR/bin/TTversion.jar;MyT2DIR/bin/* Sequenic.T2.Main Examples.SimpleSortedList
+}}}
+
+where MyT2DIR is the assumed directory where you have installed/unzipped T2.
+
+
+===Using T2 from JUnit===
+
+We'll just have to write our usual Junit test; however inside the test we will call T2 to generate the test cases for us. Here is my test:
 
 {{{
 import org.junit.Test;
