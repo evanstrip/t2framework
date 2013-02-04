@@ -234,9 +234,7 @@ Then just run the above test as usual with Junit; but additionally you need to:
   * Include {{{MyT2DIR/bin/T2version.jar}}} and {{{MyT2DIR/bin/*}}} in your class path
   * To turn on the {{{-ea}}} option of JVM (to enable Java assertions checking).
 
-
-
-That's it!!
+The above way of using T2 in JUnit is however not ideal. Every time you run it, T2 may randomly produce different test-sequences. You need to use a different function, namely {{{Main.GenAndReplayJunit}}} to prevent T2 from re-generating sequences in subsequent runs. Check the Manual.
 
 ==How does T2 works?==
 
@@ -260,7 +258,7 @@ There are options to do regression (replaying saved tests), generating test sequ
 
 ===Using T2 in IDE===
 
-Well, you don't need any special support. As explained above, you can use T2 as a library, and call it from inside your Junit tests. So you can just use T2 in any IDE that supports Junit integration like Eclipse or Netbeans. It is not necessary but highly recommended that you also instell a plugin for your IDE that can measures the code coverage of your Junit tests; then you do the same with your T2 tests. E.g. for Eclipse you have the EclEmma plugin that can do this. 
+Well, you don't need any special support. As explained above, you can use T2 as a library for writing JUnit test suites. So you can just use T2 in any IDE that supports Junit integration, like Eclipse or Netbeans. It is not necessary but highly recommended that you also install a plugin for your IDE that can measures the code coverage of your Junit tests; then you do the same with your T2 tests. E.g. for Eclipse you have the EclEmma plugin that can do this. 
 
 ===Combining automated and manual tests===
 
