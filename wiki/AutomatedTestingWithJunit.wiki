@@ -140,7 +140,21 @@ where MyT2DIR is the assumed directory where you have installed/unzipped T2. T2 
 ** Prob. of trying pool before constuctor = 0.7
 }}} 
 
+And it reports to you a summary of how many test-sequences it produces, and how many violations it finds:
 
+{{{
+** VIOLATIONS FOUND: 1
+   1 assertion violations.
+** number of irrelevant checks: 3.
+   3 PRE violations.
+** total number of traces: 5
+** total execution steps : 16
+** average trace lenght  : 3.0
+** time: 172ms.
+** average time per step: 10.0ms.
+...
+** Saving 1 traces...
+}}}
 
 
 ===Using T2 from JUnit===
