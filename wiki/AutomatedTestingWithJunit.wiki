@@ -7,7 +7,7 @@ by Wishnu Prasetya
 
 *Download and install [http://code.google.com/p/t2framework/ T2] first*;  it an automated testing utility for Java. It is a free.
 
-==Example: a SortedList class==
+==Example: a Sorted List class==
 
 Let's consider the example below. It's a simple class that provides sorted lists.
 
