@@ -75,7 +75,7 @@ By the way, the class has a number of bugs; e.g. {{{pricePerMonth}}} is supposed
 Let us write two simple tests to check if pricePerMonth correctly calculates the price per month:
 
    # If we have a subscription of 200 cent for a period of 2 month, its monthly price should be 1 euro, right?
-   # The monthly price is supposed to be rounded up to the nearest cent. So, if we have a subscription of 200 cent for a period of 3 month, its monthly price should be 0:67 euro.
+   # The monthly price is supposed to be rounded up to the nearest cent. So, if we have a subscription of 200 cent for a period of 3 month, its monthly price should be exactly 0.67 euro.
 
 Of course we can write tests without JUnit; but this tutorial is about JUnit. So here is how we write them in JUnit.
 
@@ -114,6 +114,11 @@ assertTrue(S.pricePerMonth() == 1.0)
 }}}
 
 By the way, the annotation {{{@Test}}} and the method {{{assertTrue}}} are things exported by the JUnit library; so you need the imports as in the above code to use them.
+
+(Note: some people pointed out that I should not compare a double using
+== as I did above, due to possible rounding imprecission. However, in
+this case, the value should exact up to two decimals; so using == is
+reasonable.)
 
 ===Compiling and executing your test===
 
@@ -161,12 +166,5 @@ The next thing you want to do is to fix your {{{Subscription}}} class and then t
 
 That’s it! Now go and write your own tests.
 
-===Further reading===
-
-  * Eventually you will have to write tests for a serious class. JUnit offers some additional facilities to let you better and more efficiently organize your tests. Unfortunately I don't know a good tutorial for this; so for now I'll just point you to [http://junit.sourceforge.net/doc/faq/faq.htm JUnit FAQ].
-
-  * You may also want to read my [http://www.cs.uu.nl/wiki/pub/WP/TrainingInSoftwareTesting/JUnit_with_Eclipse.pdf JUnit in Eclipse Quick Tutorial].
-
-  * Check out my article about [AutomatedTestingWithJunit automated testing with JUnit], or my automated testing too [http://code.google.com/p/t2framework/ T2].
  
 ===END.===
