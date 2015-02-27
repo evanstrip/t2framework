@@ -92,4 +92,4 @@ You will get an window where you can specify which classes and packages you want
 
 === Check out my other tutorials ===
 
-   Wishnu Prasetya, [JUnitQuickTutorial  JUnit 4.x Quick Tutorial]
+  * Wishnu Prasetya, [JUnitQuickTutorial  JUnit 4.x Quick Tutorial]
