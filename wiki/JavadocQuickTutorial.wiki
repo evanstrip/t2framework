@@ -1,5 +1,7 @@
 = A tutorial for basic use of Javadoc =
 
+by Wishnu Prasetya
+
 Javadoc is a standard tool that allows you to generate HTML documentation of your Java programs. All you need to do is to write your comments in your programs, then you run javadoc to generate your HTML docs. However you must write your documentation in a certain way. 
 
 Here how you can add a comment that describes your class. Rather than starting a comment
@@ -87,3 +89,7 @@ javadoc -d mydocs -sourcepath src MyPackage
 Very easy. Use the menu item: Project > Generate javadoc
 
 You will get an window where you can specify which classes and packages you want to pass to Javadoc. You may need to specify somewhere in that window a path to your javadoc program. Then you can click on ok/finish button.
+
+=== Check out my other tutorials ===
+
+   Wishnu Prasetya, [JUnitQuickTutorial  JUnit 4.x Quick Tutorial]
