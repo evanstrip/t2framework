@@ -167,4 +167,6 @@ The next thing you want to do is to fix your {{{Subscription}}} class and then t
 That’s it! Now go and write your own tests.
 
  
-===END.===
+=== Check out my other tutorials ===
+
+  * Wishnu Prasetya, [JavadocQuickTutorial  A tutorial for basic use of Javadoc]
