@@ -1,0 +1,95 @@
+# A tutorial for basic use of Javadoc #
+
+by Wishnu Prasetya
+
+Javadoc is a standard tool that allows you to generate HTML documentation of your Java programs. All you need to do is to write your comments in your programs, then you run javadoc to generate your HTML docs. However you must write your documentation in a certain way.
+
+Here how you can add a comment that describes your class. Rather than starting a comment
+with the usual `/*`, you must start with `/**` to make your comment to be understood by javadoc. You can also use HTML in your comment, as shown below.
+
+```
+/**
+ * An object of this class represents a person, which may have <i>friends</i>.
+ */
+public class Person {
+    public String name ;
+    public Set<Person> friends ;
+    ...
+}
+```
+
+You can add pieces of documentation to your public attributes, constructors, and methods, like this:
+
+```
+public class Person {
+
+    /**
+     * This is the name of this person.
+     */
+    public String name ;
+    
+    /**
+     * This is this person's set of friends.
+     */
+    public Set<Person> friends ;
+    
+    /**
+     * This will create a person with the given name, and an empty set of friends.</p>
+     */
+    public Person(String n) {
+            name = n ; friends = new HashSet<Person>() ;
+    }
+    
+    /**
+     * This will return true if this person has no friend.
+     */
+    public boolean isLonely() { return friends.isEmpty() ; }
+}
+```
+
+If a method has complex parameters, you may want to describe them separately. This is
+an example of how you can to that, and to also describe the return value:
+
+```
+    /**
+     * This method is used to add a friend to this person, if the person is not a
+     * friend already.
+     * 
+     * @param p The person to be added as a friend.
+     * @return  True if p is new a friend; else false.
+     */
+    public boolean addFriend(Person p) { 
+            if (friends.contains(p)) return false ;
+            friends.add(p) ; 
+            return true ;
+    }
+```
+
+### Running javadoc ###
+
+To run javadoc you will need to have it. It should already be included in your Java, and the path to it should already be included in your system. So, to run it you need to do something like this from your **console**:
+
+```
+javadoc -d mydocs src\*.java
+```
+
+where `mydocs` is the directory where you want to put the generated HTML documentations; `src` is the directory where you put your java files. The above command will generate HTML documentation of all Java files in `src`.
+
+The result is [something like this.](http://people.cs.uu.nl/wishnu/etc/Person.html)
+
+However the above command does not generate documentation for the Java classes which are within a package. To generate the documentation of an entire package do something like this:
+
+```
+javadoc -d mydocs -sourcepath src MyPackage
+```
+
+
+### Using Javadoc from Eclipse ###
+
+Very easy. Use the menu item: Project > Generate javadoc
+
+You will get an window where you can specify which classes and packages you want to pass to Javadoc. You may need to specify somewhere in that window a path to your javadoc program. Then you can click on ok/finish button.
+
+### Check out my other tutorials ###
+
+  * Wishnu Prasetya, [JUnit 4.x Quick Tutorial](JUnitQuickTutorial.md)
